@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
+import { useNavigate } from 'react-router-dom';
 
 const Create = () => {
     let [title, setTitle] = useState('');
@@ -10,7 +11,8 @@ const Create = () => {
     let [image, setImage] = useState('');
     let [categories, setCategories] = useState([]);
 
-    let {} = useFetch('http://localhost:3000/books', "POST");
+    let {setPostData, data} = useFetch('http://localhost:3000/books', "POST");
+    let navigate = useNavigate();
 
     let addCategory = (e) => {
         setCategories(prev => [newCategory, ...prev])
@@ -26,8 +28,14 @@ const Create = () => {
             categories,
             image
         }
-        console.log(data);
+        console.log(data)
+        setPostData(data);
     }
+    useEffect(() => {
+        if(data) {
+            navigate('/')
+        }
+    }, [data])
     return (
         <div>
             <form className="w-full max-w-lg mx-auto mt-5" onSubmit={addBook}>
@@ -37,7 +45,7 @@ const Create = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                             Book Title {title}
                         </label>
-                        <input value={title} onChange={e => setTitle(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200 focus:border-gray-500" id="grid-password" type="text" placeholder="Book Title"/>
+                        <input value={title} onChange={e => setTitle(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200 focus:border-gray-500" type="text" placeholder="Book Title"/>
                     </div>
                 </div>
                 {/* author */}
@@ -46,7 +54,7 @@ const Create = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                             Author
                         </label>
-                        <input value={author} onChange={e => setAuthor(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200  focus:border-gray-500" id="grid-password" type="text" placeholder="Author Name"/>
+                        <input value={author} onChange={e => setAuthor(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200  focus:border-gray-500" type="text" placeholder="Author Name"/>
                     </div>
                 </div>
                 {/* year */}
@@ -55,7 +63,7 @@ const Create = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                             Year By
                         </label>
-                        <input value={year} onChange={e => setYear(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200 focus:border-gray-500" id="grid-password" type="text" placeholder="Year By"/>
+                        <input value={year} onChange={e => setYear(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200 focus:border-gray-500" type="text" placeholder="Year By"/>
                     </div>
                 </div>
                 {/* description */}
@@ -64,7 +72,7 @@ const Create = () => {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                             Book Description
                         </label>
-                        <textarea value={description} onChange={e => setDescription(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200 focus:border-gray-500" id="grid-password" type="text" placeholder="Write description about Book"/>
+                        <textarea value={description} onChange={e => setDescription(e.target.value)} className="appearance-none block w-full bg-rose-400 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-rose-200 focus:border-gray-500" type="text" placeholder="Write description about Book"/>
                     </div> 
                 </div>
                 {/* categories */}
@@ -98,8 +106,12 @@ const Create = () => {
                             Book Cover Image
                         </label>
                         <input
-                            value={image} 
-                            onChange={e => setImage(e.target.value)}
+                            onChange={e => {
+                                const file = e.target.files[0];
+                                if (file) {
+                                    setImage(`images/${file.name}`);
+                                }
+                            }}
                             id="image"
                             name="image"
                             type="file"

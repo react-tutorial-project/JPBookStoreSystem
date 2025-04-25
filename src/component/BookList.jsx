@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useFetch from '../hooks/useFetch';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const BookList = () => {
-    let { data, loading, error } = useFetch('http://localhost:3000/books');
+    let location = useLocation();
+    let params = new URLSearchParams(location.search)
+    let search = params.get('search');
+    let { data, loading, error } = useFetch(`http://localhost:3000/books?q=${search ? `?q=${search}` : ''}`);
 
     if (error) {
         return <p>{error}</p>;
@@ -22,11 +25,13 @@ const BookList = () => {
                             >
                                 {/* Image */}
                                 <div className="overflow-hidden">
-                                    <img 
-                                        src={`/${book.image}`} 
-                                        alt={book.title} 
-                                        className="w-full h-100 object-cover rounded"
-                                    />
+                                    {book.image && (
+                                        <img 
+                                            src={`/${book.image}`} 
+                                            alt={book.title} 
+                                            className="w-full h-100 object-cover rounded"
+                                        />
+                                    )}
                                 </div>
 
                                 <div className="text-center space-y-2 mt-3 flex-grow">

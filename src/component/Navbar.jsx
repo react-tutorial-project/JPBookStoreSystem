@@ -1,7 +1,14 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 const Layout = () => {
+    let [search, setSearch] = useState('');
+    let navigate = useNavigate();
+
+    let handleSearch = (e) => {
+        navigate('/?search=' + search);
+    }
+
     return (
         <div>
             <nav className='border border-b-1'>
@@ -10,7 +17,10 @@ const Layout = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
-                        <input type="text" placeholder='Search Books ...' className='outline-none'/>
+                        <input value={search} onChange={e => setSearch(e.target.value)} type="text" placeholder='Search Books ...' className='outline-none'/>
+                        <button onClick={handleSearch} className='text-white bg-rose-400 px-3 py-1 rounded-2xl flex items-center gap-1'>
+                            <span className='hidden md:block'>Search</span>
+                        </button>
                     </li>
                     <li className='flex items-center gap-3'>
                         <Link to="/" className='flex items-center gap-3 md:-m-32 cursor-pointer'>

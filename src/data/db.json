@@ -157,69 +157,31 @@
       "image": "images/ao.jpg"
     },
     {
-      "id": "4310"
+      "id": "06b7",
+      "title": "The Book of Tea",
+      "author": "Kakuzō Okakura",
+      "year": "1906",
+      "description": "A philosophical exploration of the Japanese tea ceremony and how it reflects Zen and Taoist values.",
+      "categories": [
+        "Tea Ceremony",
+        "Philosophy",
+        "Culture"
+      ],
+      "image": "images/thebookoftea.jpg"
     },
     {
-      "id": "1a5f"
-    },
-    {
-      "id": "4924"
-    },
-    {
-      "id": "3518"
-    },
-    {
-      "id": "861a"
-    },
-    {
-      "id": "1194"
-    },
-    {
-      "id": "3b03"
-    },
-    {
-      "id": "db63"
-    },
-    {
-      "id": "52e7"
-    },
-    {
-      "id": "5f72"
-    },
-    {
-      "id": "58a4"
-    },
-    {
-      "id": "83fe"
-    },
-    {
-      "id": "10f3"
-    },
-    {
-      "id": "ef4c"
-    },
-    {
-      "id": "6396"
-    },
-    {
-      "id": "b086"
-    },
-    {
-      "id": "675f"
-    },
-    {
-      "id": "6787"
-    },
-    {
-      "id": "7541"
-    },
-    {
-      "id": "991d"
-    },
-    {
-      "id": "20f0"
-    },
-    {
-      "id": "7cf7"
-    },
-    
+      "id": "a88f",
+      "title": "Wabi Sabi: Japanese Wisdom for a Perfectly Imperfect Life",
+      "author": "Beth Kempton",
+      "year": "2018",
+      "description": "A modern introduction to the ancient concept of wabi sabi — the beauty of things imperfect, impermanent, and incomplete.",
+      "categories": [
+        "Aesthetics",
+        "Self-Help",
+        "Culture",
+        "Lifestyle"
+      ],
+      "image": "images/wabi.jpg"
+    }
+  ]
+}
