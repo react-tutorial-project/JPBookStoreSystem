@@ -1,0 +1,225 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Start with Why",
+      "author": "Simon Sinek",
+      "year": 2009,
+      "description": "Focuses on purpose-driven leadership. Why do some leaders inspire while others just manage? This book helps you lead with clarity and conviction.",
+      "categories": [
+        "Leadership",
+        "Motivation",
+        "Strategy"
+      ],
+      "image": "images/Start-with-Why.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Just One Cookbook",
+      "author": "Namiko Chen",
+      "year": 2016,
+      "description": "Perfect for beginners! Clear, step-by-step instructions with photos. Great for everyday Japanese home cooking like teriyaki, miso soup, and onigiri.",
+      "categories": [
+        "Cooking",
+        "Beginner Friendly",
+        "Home Recipes"
+      ],
+      "image": "images/cooking2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Kimi ni Todoke",
+      "author": "Karuho Shiina",
+      "year": 2005,
+      "description": "A sweet, heartwarming story about a shy girl misunderstood because of her appearance, who gradually opens up and finds friendship and love with the class heartthrob.",
+      "categories": [
+        "Love",
+        "School Life",
+        "Shoujo"
+      ],
+      "image": "images/Kimi_ni_Todoke_vol_1.jpg"
+    },
+    {
+      "id": "4",
+      "title": "The Japanese Larder",
+      "author": "Luiz Hara",
+      "year": 2018,
+      "description": "Bringing Japanese Ingredients into Your Everyday Cooking",
+      "categories": [
+        "Cooking",
+        "Ingredients",
+        "Fusion"
+      ],
+      "image": "images/cooking.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Horimiya",
+      "author": "HERO & Daisuke Hagiwara",
+      "year": 2011,
+      "description": "Behind closed doors, Hori is a homebody and Miyamura hides tattoos and piercings — their unexpected friendship grows into a tender romance full of charm and laughs.",
+      "categories": [
+        "Love",
+        "Comedy",
+        "Slice of Life"
+      ],
+      "image": "images/horimiya.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Leaders Eat Last",
+      "author": "Simon Sinek",
+      "year": 2014,
+      "description": "Explores how great leaders create environments where people feel safe and valued. Uses biology, real-world examples, and military analogies. A must-read for building trust-based teams.",
+      "categories": [
+        "Leadership",
+        "Business",
+        "Team Building"
+      ],
+      "image": "images/leader.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Japanese Soul Cooking",
+      "author": "Tadashi Ono & Harris Salat",
+      "year": 2015,
+      "description": "Japanese Soul Cooking: Ramen, Tonkatsu, Tempura, and More from the Streets and Kitchens of Tokyo and Beyond",
+      "categories": [
+        "Cooking",
+        "Japanese Cuisine",
+        "Cultural"
+      ],
+      "image": "images/cooking1.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Lovely★Complex",
+      "author": "Aya Nakahara",
+      "year": 2001,
+      "description": "A tall girl and a short boy form a comedic duo — but when romance sparks, their height difference (and pride) makes things hilariously complicated.",
+      "categories": [
+        "Love",
+        "Comedy",
+        "Shoujo"
+      ],
+      "image": "images/love.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Dare to Lead",
+      "author": "Brené Brown",
+      "year": 2018,
+      "description": "Empathy, vulnerability, courage — not your typical leadership playbook. Great for human-centered leadership in teams, organizations, and creative work.",
+      "categories": [
+        "Leadership",
+        "Emotional Intelligence",
+        "Personal Growth"
+      ],
+      "image": "images/dare.jpg"
+    },
+    {
+      "id": "10",
+      "title": "The Journey of Elaina (Majo no Tabitabi)",
+      "author": "Jougi Shiraishi & Itsuki Nanao",
+      "year": 2016,
+      "description": "A graceful traveling witch explores different countries, each with unique cultures and stories. Romance is subtle and rare, but the themes of longing and connection run deep.",
+      "categories": [
+        "Fantasy",
+        "Adventure",
+        "Slice of Life"
+      ],
+      "image": "images/journey.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Tonari no Kaibutsu-kun (My Little Monster)",
+      "author": "Robico",
+      "year": 2008,
+      "description": "A studious girl and a troublemaker boy form an unusual bond that slowly develops into something more, mixing awkward moments with sweet emotion.",
+      "categories": [
+        "Love",
+        "Comedy",
+        "School Life"
+      ],
+      "image": "images/tonari.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Ao Haru Ride",
+      "author": "Io Sakisaka",
+      "year": 2011,
+      "description": "High school romance with a second-chance twist — Futaba reunites with her first love, Kou, only to find he’s completely changed. Can they reconnect?",
+      "categories": [
+        "Love",
+        "Drama",
+        "Shoujo"
+      ],
+      "image": "images/ao.jpg"
+    },
+    {
+      "id": "4310"
+    },
+    {
+      "id": "1a5f"
+    },
+    {
+      "id": "4924"
+    },
+    {
+      "id": "3518"
+    },
+    {
+      "id": "861a"
+    },
+    {
+      "id": "1194"
+    },
+    {
+      "id": "3b03"
+    },
+    {
+      "id": "db63"
+    },
+    {
+      "id": "52e7"
+    },
+    {
+      "id": "5f72"
+    },
+    {
+      "id": "58a4"
+    },
+    {
+      "id": "83fe"
+    },
+    {
+      "id": "10f3"
+    },
+    {
+      "id": "ef4c"
+    },
+    {
+      "id": "6396"
+    },
+    {
+      "id": "b086"
+    },
+    {
+      "id": "675f"
+    },
+    {
+      "id": "6787"
+    },
+    {
+      "id": "7541"
+    },
+    {
+      "id": "991d"
+    },
+    {
+      "id": "20f0"
+    },
+    {
+      "id": "7cf7"
+    },
+    
